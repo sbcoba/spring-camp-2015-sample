@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+    <comment>환경변수 설정파일</comment>
+
+    <entry key="profiles.active">${profiles.active}</entry>
+
+    <entry key="db.driver">${db.driver}</entry>
+    <entry key="db.url">${db.url}</entry>
+    <entry key="db.user">${db.user}</entry>
+    <entry key="db.password">${db.password}</entry>
+</properties>

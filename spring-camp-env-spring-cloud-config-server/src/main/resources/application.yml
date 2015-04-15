@@ -1,0 +1,28 @@
+server:
+  port: 8888
+
+management:
+  context-path: /admin
+
+logging:
+  level:
+    com.netflix.discovery: 'OFF'
+    org.springframework.cloud: 'DEBUG'
+
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/sbcoba/config-repo
+          basedir: target/config
+
+security:
+  user:
+    password: password
+
+logging.level:
+  org.springframework.core.env: INFO
+  org.springframework.web: DEBUG
+  org.springframework.security: DEBUG
+  org.springframework: DEBUG

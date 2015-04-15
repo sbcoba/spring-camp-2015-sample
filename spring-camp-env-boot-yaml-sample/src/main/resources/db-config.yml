@@ -1,0 +1,47 @@
+service:
+  name: LeeSuHong
+  phone: "010-5482-1212"
+  sex: 'M'
+
+---
+spring.profiles: prod1,prod2,prod3
+
+db:
+  driver: oracle.jdbc.driver.OracleDriver
+  url: jdbc:oracle:thin:@//123.45.67.78:1521/prod
+  user: prod
+  password: prod1234
+
+---
+spring.profiles: test1,test2
+
+db:
+  driver: oracle.jdbc.driver.OracleDriver
+  url: jdbc:oracle:thin:@//123.45.67.78:1521/dev
+  user: devtest
+  password: test
+
+---
+spring.profiles: staging,alpha
+db:
+  driver: oracle.jdbc.driver.OracleDriver
+  url: jdbc:oracle:thin:@//123.45.67.78:1521/alpha
+  user: alphatest
+  password: test
+
+---
+spring.profiles: local_h2
+
+db:
+  driver: org.h2.Driver
+  url: jdbc:h2:mem:local;DB_CLOSE_DELAY=-1;MODE=Oracle;TRACE_LEVEL_SYSTEM_OUT=2
+  user: sa
+  password: ""
+---
+spring.profiles: local_oracle
+
+db:
+  driver: oracle.jdbc.driver.OracleDriver
+  url: jdbc:oracle:thin:@10.20.30.40:1521:devora
+  user: oracledev
+  password: 123

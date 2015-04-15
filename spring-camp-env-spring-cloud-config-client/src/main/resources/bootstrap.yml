@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: springCampClientSample
+  profiles:
+    active: local_h2
+  cloud:
+    config:
+      uri: http://localhost:${config.port:8888}
+      username: user
+      password: password

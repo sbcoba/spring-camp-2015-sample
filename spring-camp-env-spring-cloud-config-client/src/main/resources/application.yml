@@ -1,0 +1,15 @@
+info:
+  component: Spring camp cloud config samples
+endpoints:
+  restart:
+    enabled: true
+logging:
+  levels:
+    org.springframework.boot.env.PropertySourcesLoader: TRACE
+    org.springframework.web: DEBUG
+    org.springframework: DEBUG
+
+spring:
+  view:
+    prefix: /WEB-INF/views/
+    suffix: .jsp

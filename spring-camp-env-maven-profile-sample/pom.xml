@@ -1,0 +1,182 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.springapp</groupId>
+    <artifactId>spring-camp-env-maven-profile-sample</artifactId>
+    <packaging>war</packaging>
+    <version>1.0-SNAPSHOT</version>
+    <name>spring-camp-env-maven-profile-sample</name>
+
+    <properties>
+        <spring.version>3.0.7.RELEASE</spring.version>
+
+        <!-- Java version -->
+        <java.version>1.6</java.version>
+
+        <!-- ContextPath in eclipse project-->
+        <m2eclipse.wtp.contextRoot>/</m2eclipse.wtp.contextRoot>
+    </properties>
+
+    <build>
+        <finalName>spring-camp-env-maven-profile-sample</finalName>
+        <filters>
+            <filter>${project.basedir}/build-${profiles.active}.properties</filter>
+        </filters>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>true</filtering>
+            </resource>
+        </resources>
+        <plugins>
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.6</source>
+                    <target>1.6</target>
+                </configuration>
+            </plugin>
+            <plugin>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <configuration>
+                    <includes>
+                        <include>**/*Tests.java</include>
+                    </includes>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>properties-maven-plugin</artifactId>
+                <version>1.0-alpha-2</version>
+                <executions>
+                    <execution>
+                        <phase>initialize</phase>
+                        <goals>
+                            <goal>read-project-properties</goal>
+                        </goals>
+                        <configuration>
+                            <files>
+                                <file>${project.basedir}/build-${profiles.active}.properties</file>
+                            </files>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.eclipse.m2e</groupId>
+                    <artifactId>lifecycle-mapping</artifactId>
+                    <version>1.0.0</version>
+                    <configuration>
+                        <lifecycleMappingMetadata>
+                            <pluginExecutions>
+                                <pluginExecution>
+                                    <pluginExecutionFilter>
+                                        <groupId>org.codehaus.mojo</groupId>
+                                        <artifactId>properties-maven-plugin</artifactId>
+                                        <versionRange>[1.0-alpha-2,)</versionRange>
+                                        <goals>
+                                            <goal>read-project-properties</goal>
+                                        </goals>
+                                    </pluginExecutionFilter>
+                                    <action>
+                                        <ignore />
+                                    </action>
+                                </pluginExecution>
+                            </pluginExecutions>
+                        </lifecycleMappingMetadata>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-core</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-web</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>servlet-api</artifactId>
+            <version>2.5</version>
+        </dependency>
+
+        <dependency>
+            <groupId>javax.servlet.jsp</groupId>
+            <artifactId>jsp-api</artifactId>
+            <version>2.1</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-test</artifactId>
+            <version>${spring.version}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.11</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <profiles>
+        <profile>
+            <id>local_h2</id>
+            <properties> <profiles.active>local_h2</profiles.active> </properties>
+        </profile>
+        <profile>
+            <id>local_oracle</id>
+            <activation> <activeByDefault>true</activeByDefault> </activation>
+            <properties> <profiles.active>local_oracle</profiles.active> </properties>
+        </profile>
+        <profile>
+            <id>staging</id>
+            <properties> <profiles.active>staging</profiles.active> </properties>
+        </profile>
+        <profile>
+            <id>alpha</id>
+            <properties> <profiles.active>alpha</profiles.active> </properties>
+        </profile>
+        <profile>
+            <id>prod1</id>
+            <properties> <profiles.active>prod1</profiles.active> </properties>
+        </profile>
+        <profile>
+            <id>prod2</id>
+            <properties> <profiles.active>prod2</profiles.active> </properties>
+        </profile>
+        <profile>
+            <id>prod3</id>
+            <properties> <profiles.active>prod3</profiles.active> </properties>
+        </profile>
+        <profile>
+            <id>test1</id>
+            <properties> <profiles.active>test1</profiles.active> </properties>
+        </profile>
+        <profile>
+            <id>test2</id>
+            <properties> <profiles.active>test2</profiles.active> </properties>
+        </profile>
+    </profiles>
+</project>
