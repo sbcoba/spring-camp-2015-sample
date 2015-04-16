@@ -14,7 +14,7 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/sbcoba/config-repo
+          uri: https://github.com/sbcoba/spring-camp-2015-sample
           basedir: target/config
 
 security:
