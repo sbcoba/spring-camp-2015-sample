@@ -142,41 +142,18 @@
 
     <profiles>
         <profile>
-            <id>local_h2</id>
-            <properties> <profiles.active>local_h2</profiles.active> </properties>
-        </profile>
-        <profile>
-            <id>local_oracle</id>
+            <id>local</id>
+            <properties> <profiles.active>local</profiles.active> </properties>
             <activation> <activeByDefault>true</activeByDefault> </activation>
-            <properties> <profiles.active>local_oracle</profiles.active> </properties>
         </profile>
         <profile>
             <id>staging</id>
             <properties> <profiles.active>staging</profiles.active> </properties>
         </profile>
         <profile>
-            <id>alpha</id>
-            <properties> <profiles.active>alpha</profiles.active> </properties>
-        </profile>
-        <profile>
             <id>prod1</id>
             <properties> <profiles.active>prod1</profiles.active> </properties>
         </profile>
-        <profile>
-            <id>prod2</id>
-            <properties> <profiles.active>prod2</profiles.active> </properties>
-        </profile>
-        <profile>
-            <id>prod3</id>
-            <properties> <profiles.active>prod3</profiles.active> </properties>
-        </profile>
-        <profile>
-            <id>test1</id>
-            <properties> <profiles.active>test1</profiles.active> </properties>
-        </profile>
-        <profile>
-            <id>test2</id>
-            <properties> <profiles.active>test2</profiles.active> </properties>
-        </profile>
+        <!-- ...-->
     </profiles>
 </project>

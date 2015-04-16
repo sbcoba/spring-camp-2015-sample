@@ -2,7 +2,7 @@ spring:
   application:
     name: springCampClientSample
   profiles:
-    active: local_h2
+    active: local
   cloud:
     config:
       uri: http://localhost:${config.port:8888}

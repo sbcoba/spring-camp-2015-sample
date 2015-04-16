@@ -1,4 +1,4 @@
-spring.profiles.active: local_oracle
+spring.profiles.active: local
 
 spring.config.location: classpath:/db-config.yml
 
