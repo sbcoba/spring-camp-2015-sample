@@ -22,6 +22,8 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.springframework.boot.test.OutputCapture;
 
+import com.springcamp.env.SampleProfileApplication;
+
 import static org.junit.Assert.assertTrue;
 
 public class SampleProfileApplicationTests {

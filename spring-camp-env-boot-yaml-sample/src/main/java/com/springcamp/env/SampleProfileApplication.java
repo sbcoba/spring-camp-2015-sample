@@ -1,4 +1,4 @@
-package sample.profile;
+package com.springcamp.env;
 
 import java.util.ArrayList;
 import java.util.Arrays;

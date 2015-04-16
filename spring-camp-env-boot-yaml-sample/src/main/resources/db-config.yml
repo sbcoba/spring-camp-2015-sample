@@ -13,21 +13,29 @@ db:
   password: prod1234
 
 ---
-spring.profiles: test1,test2
+spring.profiles: test1
 
 db:
   driver: oracle.jdbc.driver.OracleDriver
-  url: jdbc:oracle:thin:@//123.45.67.78:1521/dev
-  user: devtest
-  password: test
+  url: jdbc:oracle:thin:@//123.45.67.78:15211/test1
+  user: test1
+  password: test1
+---
+spring.profiles: test2
+
+db:
+  driver: oracle.jdbc.driver.OracleDriver
+  url: jdbc:oracle:thin:@//123.45.67.78:15211/test2
+  user: test2
+  password: test2
 
 ---
 spring.profiles: staging
 db:
   driver: oracle.jdbc.driver.OracleDriver
-  url: jdbc:oracle:thin:@//123.45.67.78:1521/alpha
-  user: alphatest
-  password: test
+  url: jdbc:oracle:thin:@//123.45.67.78:1521/staging
+  user: staging
+  password: staging
 
 ---
 spring.profiles: local

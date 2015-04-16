@@ -1,4 +1,4 @@
-package sample.profile.service;
+package com.springcamp.env.service;
 
 import javax.annotation.PostConstruct;
 
@@ -21,7 +21,7 @@ public class HelloService {
     private String dbPassword;
 
     @Autowired
-    private ServiceProperties prop;
+    private DatabaseProperties prop;
 
     @PostConstruct
     public void printDbProperty() {
@@ -29,10 +29,6 @@ public class HelloService {
         log.info("dbUrl: {}", dbUrl);
         log.info("dbUser: {}", dbUser);
         log.info("dbPassword: {}", dbPassword);
-
-        log.info("name: {}", prop.getName());
-        log.info("phone: {}", prop.getPhone());
-        log.info("sex: {}", prop.getSex());
 
 	}
 }

@@ -1,8 +1,11 @@
 spring.profiles.active: local
 
-spring.config.location: classpath:/db-config.yml
-
 service:
   name: LeeSuHong
   phone: '010-5482-1212'
   sex: 'M'
+
+spring:
+  view:
+    prefix: /WEB-INF/views/
+    suffix: .jsp
