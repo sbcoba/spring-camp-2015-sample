@@ -45,6 +45,9 @@
                 <version>2.2</version>
                 <configuration>
                     <path>/</path>
+                    <systemProperties>
+                        <JAVA_OPTS>-Dspring.profiles.active=${spring.profiles.active}</JAVA_OPTS>
+                    </systemProperties>
                 </configuration>
             </plugin>
         </plugins>
