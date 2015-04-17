@@ -22,6 +22,7 @@ public class HelloController {
 
 	@RequestMapping(method = RequestMethod.GET)
 	public String printWelcome(ModelMap model) {
+
 		model.addAttribute("message", "Hello world!");
 		model.addAttribute("profilesActives", Arrays.toString(environment.getActiveProfiles()));
 		model.addAttribute("dbDriver", prop.getDriver());
