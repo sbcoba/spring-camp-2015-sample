@@ -9,6 +9,13 @@
 	<artifactId>spring-camp-env-boot-yaml-sample</artifactId>
 	<name>spring-camp-env-boot-yaml-sample</name>
 	<description>Spring Boot Profile Sample</description>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <start-class>com.springcamp.env.SampleProfileApplication</start-class>
+        <java.version>1.7</java.version>
+    </properties>
+
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
