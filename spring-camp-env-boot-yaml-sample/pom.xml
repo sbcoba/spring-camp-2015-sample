@@ -8,7 +8,7 @@
     </parent>
 	<artifactId>spring-camp-env-boot-yaml-sample</artifactId>
 	<name>spring-camp-env-boot-yaml-sample</name>
-	<description>Spring Boot Profile Sample</description>
+	<description>Spring Boot Yaml Profile Sample</description>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -39,6 +39,12 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>javax.el</groupId>
+			<artifactId>javax.el-api</artifactId>
+			<version>2.2.4</version>
 		</dependency>
 	</dependencies>
 	<build>
