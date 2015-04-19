@@ -94,6 +94,25 @@ $ mvn spring-boot:run -Dspring.profiles.active=staging
 $ mvn spring-boot:run -Dspring.profiles.active=prod1
 $ mvn spring-boot:run -Dspring.profiles.active=prod2
 ```
+4. 브라우저 로컬 테스트
+- [http://localhost:8080](http://localhost:8080)
 
-3. 로컬 테스트
-[http://localhost:8080](http://localhost:8080)
+5. 원격 환경 변수 변경 테스트
+	- 일단 현재 github 소스를 fork 하여 각자 github로 가져가야 테스트가 가능
+	- /spring-camp-env-spring-cloud-config-server/src/main/resources/application.yml
+		- 파일에서 환경변수가 저정될 github 주소를 변경
+``` yaml
+spring.cloud.config.server.git.uri: https://github.com/sbcoba/spring-camp-2015-sample
+```
+-> 이부분을 변경필요
+``` yaml
+spring.cloud.config.server.git.uri: https://github.com/자신의계정/spring-camp-2015-sample
+```
+	- springCampClientSample.yml 파일을 변경
+		- git에 push
+    - 클라이언트 refresh
+    	- ```sh
+        $ curl -X POST http://localhost:8080/refresh
+        ```
+    - localhost:8080 새로고침
+    	- 변경된 환경정보 확인
