@@ -103,9 +103,7 @@ $ mvn spring-boot:run -Dspring.profiles.active=prod2
 		- 파일에서 환경변수가 저정될 github 주소를 변경
 ``` yaml
 spring.cloud.config.server.git.uri: https://github.com/sbcoba/spring-camp-2015-sample
-```
--> 이부분을 변경필요
-``` yaml
+#-> 이부분을 변경필요
 spring.cloud.config.server.git.uri: https://github.com/자신의계정/spring-camp-2015-sample
 ```
     - springCampClientSample.yml 파일을 변경
