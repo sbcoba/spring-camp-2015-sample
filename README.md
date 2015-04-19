@@ -109,6 +109,7 @@ $ mvn spring-boot:run -Dspring.profiles.active=prod2
 	- springCampClientSample.yml 파일을 변경
 		- git에 push
     	- 클라이언트 refresh
+    		- 
 	    	```shell
 		$ curl -X POST http://localhost:8080/refresh
 		```
