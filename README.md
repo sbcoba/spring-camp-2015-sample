@@ -106,11 +106,12 @@ spring.cloud.config.server.git.uri: https://github.com/sbcoba/spring-camp-2015-s
 #-> 이부분을 변경필요
 spring.cloud.config.server.git.uri: https://github.com/자신의계정/spring-camp-2015-sample
 ```
-    - springCampClientSample.yml 파일을 변경
-	- git에 push
-    - 클라이언트 refresh
-    	- ```sh
-        $ curl -X POST http://localhost:8080/refresh
-        ```
-    - localhost:8080 새로고침
+
+	- springCampClientSample.yml 파일을 변경
+		- git에 push
+    	- 클라이언트 refresh
+    		- ```sh
+        	$ curl -X POST http://localhost:8080/refresh
+        	```
+    	- localhost:8080 새로고침
     	- 변경된 환경정보 확인
