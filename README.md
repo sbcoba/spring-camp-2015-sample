@@ -73,7 +73,7 @@ $ mvn spring-boot:run -Dspring.profiles.active=prod1
 $ mvn spring-boot:run -Dspring.profiles.active=prod2
 ```
 4. 로컬 테스트
-[http://localhost:8080](http://localhost:8080)
+- [http://localhost:8080](http://localhost:8080)
 
 ## Spring Cloud Config 샘플
 1. 위치
