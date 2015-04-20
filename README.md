@@ -72,8 +72,7 @@ $ mvn spring-boot:run -Dspring.profiles.active=staging
 $ mvn spring-boot:run -Dspring.profiles.active=prod1
 $ mvn spring-boot:run -Dspring.profiles.active=prod2
 ```
-
-3. 로컬 테스트
+4. 로컬 테스트
 [http://localhost:8080](http://localhost:8080)
 
 ## Spring Cloud Config 샘플
@@ -82,21 +81,21 @@ $ mvn spring-boot:run -Dspring.profiles.active=prod2
 	- /spring-camp-env-spring-cloud-config-client
 	- /spring-camp-env-spring-cloud-config-repo
 2. 방법
-	```sh
-	$ cd spring-camp-env-spring-cloud-config-server
-	$ mvn spring-boot:run
-	$ cd spring-camp-env-spring-cloud-config-client
-	$ mvn spring-boot:run
-	```
+```sh
+$ cd spring-camp-env-spring-cloud-config-server
+$ mvn spring-boot:run
+$ cd spring-camp-env-spring-cloud-config-client
+$ mvn spring-boot:run
+```
 3. 프로파일 별 실행방법
-	```sh
-	$ cd spring-camp-env-spring-cloud-config-client
-	$ mvn spring-boot:run -Dspring.profiles.active=local
-	$ mvn spring-boot:run -Dspring.profiles.active=test1
-	$ mvn spring-boot:run -Dspring.profiles.active=staging
-	$ mvn spring-boot:run -Dspring.profiles.active=prod1
-	$ mvn spring-boot:run -Dspring.profiles.active=prod2
-	```
+```sh
+$ cd spring-camp-env-spring-cloud-config-client
+$ mvn spring-boot:run -Dspring.profiles.active=local
+$ mvn spring-boot:run -Dspring.profiles.active=test1
+$ mvn spring-boot:run -Dspring.profiles.active=staging
+$ mvn spring-boot:run -Dspring.profiles.active=prod1
+$ mvn spring-boot:run -Dspring.profiles.active=prod2
+```
 4. 브라우저 로컬 테스트
 	- [http://localhost:8080](http://localhost:8080)
 
