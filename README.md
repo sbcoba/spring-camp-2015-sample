@@ -21,11 +21,13 @@ $ cd spring-camp-2015-sample
 1. 위치
 	- /spring-camp-env-maven-profile-sample
 2. 방법
+	-
 ```sh
 $ cd spring-camp-env-maven-profile-sample
 $ mvn tomcat7:run
 ```
 3. 프로파일 별 실행방법
+	- 
 ```sh
 $ mvn -Plocal tomcat7:run
 $ mvn -Ptest1 tomcat7:run
@@ -34,17 +36,19 @@ $ mvn -Pprod1 tomcat7:run
 $ mvn -Pprod2 tomcat7:run
 ```
 3. 로컬 테스트
-[http://localhost:8080](http://localhost:8080)
+	- [http://localhost:8080](http://localhost:8080)
 
 ## Spring 3.1 Profile 샘플
 1. 위치
 	- /spring-camp-env-spring31-sample
 2. 방법
+	-
 ```sh
 $ cd spring-camp-env-spring31-sample
 $ mvn tomcat7:run
 ```
 3. 프로파일 별 실행방법
+	-
 ```sh
 $ mvn tomcat7:run -Dspring.profiles.active=local
 $ mvn tomcat7:run -Dspring.profiles.active=test1
@@ -52,9 +56,8 @@ $ mvn tomcat7:run -Dspring.profiles.active=staging
 $ mvn tomcat7:run -Dspring.profiles.active=prod1
 $ mvn tomcat7:run -Dspring.profiles.active=prod2
 ```
-
 4. 로컬 테스트
-[http://localhost:8080](http://localhost:8080)
+	- [http://localhost:8080](http://localhost:8080)
 
 ## Spring Boot with yaml 샘플
 1. 위치
@@ -81,6 +84,7 @@ $ mvn spring-boot:run -Dspring.profiles.active=prod2
 	- /spring-camp-env-spring-cloud-config-client
 	- /spring-camp-env-spring-cloud-config-repo
 2. 방법
+	- 
 ```sh
 $ cd spring-camp-env-spring-cloud-config-server
 $ mvn spring-boot:run
@@ -88,6 +92,7 @@ $ cd spring-camp-env-spring-cloud-config-client
 $ mvn spring-boot:run
 ```
 3. 프로파일 별 실행방법
+	-
 ```sh
 $ cd spring-camp-env-spring-cloud-config-client
 $ mvn spring-boot:run -Dspring.profiles.active=local
@@ -98,7 +103,6 @@ $ mvn spring-boot:run -Dspring.profiles.active=prod2
 ```
 4. 브라우저 로컬 테스트
 	- [http://localhost:8080](http://localhost:8080)
-
 5. 원격 환경 변수 변경 테스트
 	- 일단 현재 github 소스를 fork 하여 각자 github로 가져가야 테스트가 가능
 	- /spring-camp-env-spring-cloud-config-server/src/main/resources/application.yml
