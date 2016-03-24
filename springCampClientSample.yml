@@ -27,7 +27,7 @@ db:
   driver: oracle.jdbc.driver.OracleDriver
   url: jdbc:oracle:thin:@//123.45.67.78:1521/alpha
   user: alphatest
-  password: test
+  password: test1111test1111test1111
 
 ---
 spring.profiles: local
