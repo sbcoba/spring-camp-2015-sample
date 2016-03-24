@@ -36,4 +36,4 @@ db:
   driver: org.h2.Driver
   url: jdbc:h2:mem:local;DB_CLOSE_DELAY=-1;MODE=Oracle;TRACE_LEVEL_SYSTEM_OUT=2
   user: sa
-  password: "123zzz1212121212121212"
+  password: "xx"
